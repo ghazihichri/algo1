@@ -1,0 +1,30 @@
+ALGORITHM chekpoint_algo
+VAR
+c:CHAR;
+nbrM : INTEGER :=1 ;
+nbrV : INTEGER :=0 ; 
+nbrC : INTEGER :=0 ;
+BEGIN
+         REPEAT
+          write ("entrez un caractére")
+           Read(c);
+              nbrC := nbrC +1;
+           IF (c = 'a' OR c='e' OR c='i' OR c='o' OR c='u' OR c='y') THEN
+               nbrV:= nbrV+1;
+            END_IF
+
+            IF (c=' ') THEN
+              nbrM := nbrM +1;
+            END_IF
+        
+        UNTIL (c := '.')
+        
+    write ( " nbr de caracteére", nbrC);
+    write (" nbr de mots",nbrM);
+    write ("nbr de voyelles",nbrV)    ;
+
+
+END
+
+
+
